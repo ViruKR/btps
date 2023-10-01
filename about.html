@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Timestamp</title>
+</head>
+<body>
+    <h1>System Timestamp</h1>
+    <p id="timestamp"></p>
+
+    <script>
+        function updateTimestamp() {
+            var currentTime = new Date();
+            var timestampElement = document.getElementById("timestamp");
+            timestampElement.innerHTML = "Current Timestamp: " + currentTime;
+        }
+
+        // Update the timestamp when the page loads
+        window.onload = function() {
+            updateTimestamp();
+        };
+
+        // Update the timestamp every second (1000 milliseconds)
+        setInterval(updateTimestamp, 1000);
+    </script>
+</body>
+</html>
